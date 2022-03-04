@@ -6,10 +6,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите название операции - сложение, вычитание, деление или умножение:");
+        //наименование операции для калькулятора
         String opName = scanner.next();
 
         System.out.println("Введите первое дробное число:");
+        //первое дробное число
         float d1 = scanner.nextFloat();
+
+        //второе дробное число
         System.out.println("Введите второе дробное число:");
         float d2 = scanner.nextFloat();
 
