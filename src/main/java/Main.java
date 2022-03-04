@@ -30,5 +30,7 @@ public class Main {
                 System.out.printf("В калькуляторе нет операции \"%s\"!", opName);
         }
 
+        scanner.close();
+
     }
 }
