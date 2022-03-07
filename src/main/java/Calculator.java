@@ -8,7 +8,7 @@ class Calculator {
 
     void operate() {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Введите название операции - сложение, вычитание, деление или умножение:");
         //наименование операции для калькулятора
         String opName = scanner.next();
