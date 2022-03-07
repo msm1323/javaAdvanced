@@ -2,36 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите название операции - сложение, вычитание, деление или умножение:");
-        //наименование операции для калькулятора
-        String opName = scanner.next();
-
-        System.out.println("Введите первое дробное число:");
-        //первое дробное число
-        float d1 = scanner.nextFloat();
-
-        //второе дробное число
-        System.out.println("Введите второе дробное число:");
-        float d2 = scanner.nextFloat();
-
-        switch (opName) {
-            case "сложение":
-                System.out.printf("Результат: %.4f", calculator.addition(d1, d2));
+        System.out.println("Введите номер задания: (1 - calculator, 2 - string array)");
+        switch (scanner.nextInt()) {
+            case 1:
+                Calculator task1 = new Calculator();
+                task1.operate();
                 break;
-            case "вычитание":
-                System.out.printf("Результат: %.4f", calculator.subtraction(d1, d2));
-                break;
-            case "деление":
-                System.out.printf("Результат: %.4f", calculator.division(d1, d2));
-                break;
-            case "умножение":
-                System.out.printf("Результат: %.4f", calculator.multiplication(d1, d2));
+            case 2:
+                StringArray task2 = new StringArray();
+                task2.run();
                 break;
             default:
-                System.out.printf("В калькуляторе нет операции \"%s\"!", opName);
+                System.out.println("Нет задания с введенным номером!");
         }
 
         scanner.close();
