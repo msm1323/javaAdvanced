@@ -35,8 +35,7 @@ public class CalculatorOOP implements Switchable {
         return numOfCalculators;
     }
 
-    private float getBuffer() throws CalculatorException {
-        check();
+    private float getBuffer() {
         return buffer;
     }
 
@@ -50,6 +49,7 @@ public class CalculatorOOP implements Switchable {
     }
 
     public void run() throws CalculatorException {
+        check();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Для работы с калькулятором доступны следующие команды:" +
                 "\n\"q\" - для прекращения работы" +
@@ -91,9 +91,6 @@ public class CalculatorOOP implements Switchable {
     }
 
     private float operate(LinkedList<String> currList) throws CalculatorException {
-
-        check();
-
         if (currList.size() == 1) {
             return r(Float.parseFloat(currList.get(0)));
         }
@@ -146,14 +143,12 @@ public class CalculatorOOP implements Switchable {
         return s2;
     }
 
-    private void CA() throws CalculatorException {
-        check();
+    private void CA() {
         buffer = 0;
         preValue = 0;
     }
 
-    private void CE() throws CalculatorException {
-        check();
+    private void CE() {
         buffer = r(buffer - preValue);
     }
 
