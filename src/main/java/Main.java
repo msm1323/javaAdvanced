@@ -1,11 +1,13 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws CalculatorOOP.CalculatorException {
+    public static void main(String[] args) throws CalculatorOOP.CalculatorException, IOException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите номер задания:\n" +
-                "(1 - calculator, 2 - string array, 3 - array20, 4 - sweet gift, 5 - OOP Calculator)");
+                "(1 - calculator, 2 - string array, 3 - array20, 4 - sweet gift, 5 - OOP Calculator" +
+                ", 6 - File analysis)");
         switch (Integer.parseInt(scanner.nextLine())) {
             case 1:
                 Calculator task1 = new Calculator();
@@ -28,6 +30,10 @@ public class Main {
                 calculatorOOP.on();
                 calculatorOOP.run();
                 calculatorOOP.off();
+                break;
+            case 6:
+                FileAnalysis fileAnalysis = new FileAnalysis();
+                fileAnalysis.analyse();
                 break;
             default:
                 System.out.println("Нет задания с введенным номером!");
