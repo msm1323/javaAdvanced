@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws CalculatorOOP.CalculatorException, IOException {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите номер задания:\n" +
@@ -27,9 +27,10 @@ public class Main {
                 break;
             case 5:
                 CalculatorOOP calculatorOOP = new CalculatorOOP();
-                calculatorOOP.on();
-                calculatorOOP.run();
-                calculatorOOP.off();
+//                calculatorOOP.on();
+//                calculatorOOP.runUI();
+//                calculatorOOP.run("1 + 4.6 - 6 * 7.2 + 100 / 4.7");
+//                calculatorOOP.off();
                 break;
             case 6:
                 FileAnalysis fileAnalysis = new FileAnalysis();
